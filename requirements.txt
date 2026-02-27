@@ -1,4 +1,5 @@
-# Dependencias detectadas en el proyecto
+# dependencias detectadas en el proyecto
 matplotlib
 numpy
 python-docx
+pytest
