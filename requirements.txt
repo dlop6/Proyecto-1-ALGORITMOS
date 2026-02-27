@@ -1,0 +1,4 @@
+# Dependencias detectadas en el proyecto
+matplotlib
+numpy
+python-docx

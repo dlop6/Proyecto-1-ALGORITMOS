@@ -5,7 +5,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
-from matplotlib.patches import FancyArrowPatch
+from matplotlib.patches import FancyArrowPatch, Circle
 
 
 def fibonacci(n):
@@ -18,12 +18,12 @@ def fibonacci(n):
 
 
 def dibujarCirculo(ax, x, y, texto, radio=0.35, color="#e8f0fe",
-                   bordeColor="#1a73e8", doble=False, fontSize=8):
-    c = plt.Circle((x, y), radio, facecolor=color, edgecolor=bordeColor,
+                   bordeColor="#1a73e8", doble=False, fontSize: int = 8):
+    c = Circle((x, y), radio, facecolor=color, edgecolor=bordeColor,
                    linewidth=1.5, zorder=3)
     ax.add_patch(c)
     if doble:
-        c2 = plt.Circle((x, y), radio * 0.85, facecolor="none",
+        c2 = Circle((x, y), radio * 0.85, facecolor="none",
                          edgecolor=bordeColor, linewidth=1.2, zorder=4)
         ax.add_patch(c2)
     ax.text(x, y, texto, ha="center", va="center", fontsize=fontSize,
@@ -112,7 +112,7 @@ def main():
             xk = xInicio + k * 1.0
             nombre = f"out_{n}_{k+1}"
             dibujarCirculo(ax, xk, yFila, nombre, radio=0.28,
-                           color="#fff9c4", bordeColor="#f9a825", fontSize=5.5)
+                           color="#fff9c4", bordeColor="#f9a825", fontSize=int(5.5))
             if k > 0:
                 flecha(ax, xk - 1.0 + 0.28, yFila, xk - 0.28, yFila, "B/1,R", fontSize=5.5)
 
@@ -122,7 +122,7 @@ def main():
             xUlt = xDots + 0.8
             nombreUlt = f"out_{n}_{fn}"
             dibujarCirculo(ax, xUlt, yFila, nombreUlt, radio=0.28,
-                           color="#fff9c4", bordeColor="#f9a825", fontSize=5.5)
+                           color="#fff9c4", bordeColor="#f9a825", fontSize=int(5.5))
             xFlechaAcep = xUlt
         else:
             xFlechaAcep = xInicio + (numNodos - 1) * 1.0

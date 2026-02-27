@@ -1,7 +1,7 @@
 # Punto de entrada del simulador de Máquinas de Turing.
 
 import sys, os, time, csv
-from typing import List, Dict, Tuple
+from typing import List, Dict, Tuple, Any
 
 from simuladorTuring import MaquinaDeTuring
 
@@ -32,7 +32,7 @@ def imprimirPaso(mt: MaquinaDeTuring, nPaso: int) -> None:
 
 
 def ejecutarSimulacion(rutaConfig: str, entrada: str,
-                       maxPasos: int, traza: bool) -> Dict[str, object]:
+                       maxPasos: int, traza: bool) -> Dict[str, Any]:
     """Carga la MT, la ejecuta y devuelve diccionario de resultados."""
     mt = MaquinaDeTuring(rutaConfig)
     t0 = time.perf_counter()
@@ -72,7 +72,7 @@ def ejecutarSimulacion(rutaConfig: str, entrada: str,
     }
 
 
-def mostrarResultado(res: Dict[str, object]) -> None:
+def mostrarResultado(res: Dict[str, Any]) -> None:
     print()
     print(f"  Resultado de la cinta : {res['salida']}")
     print(f"  Estado final          : {res['estadoFinal']}")
@@ -93,18 +93,18 @@ def promedio(v: List[float]) -> float:
     return sum(v) / len(v) if v else 0.0
 
 
-def resolver3x3(a, b):
-    def det3(m):
+def resolver3x3(a: list, b: list) -> tuple:
+    def det3(m: list) -> float:
         return (m[0][0]*(m[1][1]*m[2][2]-m[1][2]*m[2][1])
                 - m[0][1]*(m[1][0]*m[2][2]-m[1][2]*m[2][0])
-                + m[0][2]*(m[1][0]*m[2][1]-m[1][1]*m[2][0]))
+                + m[0][2]*(m[1][0]*m[2][1]-m[1][1]*m[2][0]))  # type: ignore[return-value]
     d = det3(a)
     if d == 0:
         return 0.0, 0.0, 0.0
-    ax = [[b[0],a[0][1],a[0][2]],[b[1],a[1][1],a[1][2]],[b[2],a[2][1],a[2][2]]]
-    ay = [[a[0][0],b[0],a[0][2]],[a[1][0],b[1],a[1][2]],[a[2][0],b[2],a[2][2]]]
-    az = [[a[0][0],a[0][1],b[0]],[a[1][0],a[1][1],b[1]],[a[2][0],a[2][1],b[2]]]
-    return det3(ax)/d, det3(ay)/d, det3(az)/d
+    ax = [[float(b[0]),float(a[0][1]),float(a[0][2])],[float(b[1]),float(a[1][1]),float(a[1][2])],[float(b[2]),float(a[2][1]),float(a[2][2])]]
+    ay = [[float(a[0][0]),float(b[0]),float(a[0][2])],[float(a[1][0]),float(b[1]),float(a[1][2])],[float(a[2][0]),float(b[2]),float(a[2][2])]]
+    az = [[float(a[0][0]),float(a[0][1]),float(b[0])],[float(a[1][0]),float(a[1][1]),float(b[1])],[float(a[2][0]),float(a[2][1]),float(b[2])]]
+    return det3(ax)/d, det3(ay)/d, det3(az)/d  # type: ignore[return-value]
 
 
 def regresionCuadratica(puntos: List[Tuple[float, float]]) -> Tuple[float, float, float]:
@@ -125,9 +125,9 @@ def regresionCuadratica(puntos: List[Tuple[float, float]]) -> Tuple[float, float
 
 def ejecutarBenchmark(rutaConfig: str, maxN: int = 12,
                       repeticiones: int = 3, maxPasos: int = 200000,
-                      rutaCsv: str = "analisis/resultadosBenchmark.csv") -> List[Dict]:
+                      rutaCsv: str = "analisis/resultadosBenchmark.csv") -> List[Dict[str, Any]]:
     """Ejecuta la MT para n=0..maxN y guarda CSV."""
-    filas: List[Dict] = []
+    filas: List[Dict[str, Any]] = []
     print("=" * 70)
     print(f"  BENCHMARK   n = 0 .. {maxN}   ({repeticiones} repeticiones)")
     print("=" * 70)

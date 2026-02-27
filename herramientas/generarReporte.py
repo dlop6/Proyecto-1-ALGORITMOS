@@ -354,8 +354,8 @@ def main():
     doc = Document()
 
     style = doc.styles["Normal"]
-    style.font.name = "Calibri"
-    style.font.size = Pt(11)
+    style.font.name = "Calibri"  # type: ignore[reportAttributeAccessIssue]
+    style.font.size = Pt(11)  # type: ignore[reportAttributeAccessIssue]
 
     seccionPortada(doc)
     seccionConvenciones(doc)
