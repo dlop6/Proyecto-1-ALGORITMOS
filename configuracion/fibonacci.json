@@ -1,0 +1,3226 @@
+{
+  "description": "MT determinista (una cinta) para Fibonacci en unario",
+  "purpose": "Entrada: 1^n. Salida: 1^F(n) para n=0..12; n>12 escribe X.",
+  "example": "111 -> 11  (F(3)=2)",
+  "states": [
+    "q0",
+    "q_aceptar",
+    "q_overflow",
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5",
+    "q6",
+    "q7",
+    "q8",
+    "q9",
+    "q10",
+    "q11",
+    "q12",
+    "q_out_3_1",
+    "q_out_3_2",
+    "q_out_4_1",
+    "q_out_4_2",
+    "q_out_4_3",
+    "q_out_5_1",
+    "q_out_5_2",
+    "q_out_5_3",
+    "q_out_5_4",
+    "q_out_5_5",
+    "q_out_6_1",
+    "q_out_6_2",
+    "q_out_6_3",
+    "q_out_6_4",
+    "q_out_6_5",
+    "q_out_6_6",
+    "q_out_6_7",
+    "q_out_6_8",
+    "q_out_7_1",
+    "q_out_7_2",
+    "q_out_7_3",
+    "q_out_7_4",
+    "q_out_7_5",
+    "q_out_7_6",
+    "q_out_7_7",
+    "q_out_7_8",
+    "q_out_7_9",
+    "q_out_7_10",
+    "q_out_7_11",
+    "q_out_7_12",
+    "q_out_7_13",
+    "q_out_8_1",
+    "q_out_8_2",
+    "q_out_8_3",
+    "q_out_8_4",
+    "q_out_8_5",
+    "q_out_8_6",
+    "q_out_8_7",
+    "q_out_8_8",
+    "q_out_8_9",
+    "q_out_8_10",
+    "q_out_8_11",
+    "q_out_8_12",
+    "q_out_8_13",
+    "q_out_8_14",
+    "q_out_8_15",
+    "q_out_8_16",
+    "q_out_8_17",
+    "q_out_8_18",
+    "q_out_8_19",
+    "q_out_8_20",
+    "q_out_8_21",
+    "q_out_9_1",
+    "q_out_9_2",
+    "q_out_9_3",
+    "q_out_9_4",
+    "q_out_9_5",
+    "q_out_9_6",
+    "q_out_9_7",
+    "q_out_9_8",
+    "q_out_9_9",
+    "q_out_9_10",
+    "q_out_9_11",
+    "q_out_9_12",
+    "q_out_9_13",
+    "q_out_9_14",
+    "q_out_9_15",
+    "q_out_9_16",
+    "q_out_9_17",
+    "q_out_9_18",
+    "q_out_9_19",
+    "q_out_9_20",
+    "q_out_9_21",
+    "q_out_9_22",
+    "q_out_9_23",
+    "q_out_9_24",
+    "q_out_9_25",
+    "q_out_9_26",
+    "q_out_9_27",
+    "q_out_9_28",
+    "q_out_9_29",
+    "q_out_9_30",
+    "q_out_9_31",
+    "q_out_9_32",
+    "q_out_9_33",
+    "q_out_9_34",
+    "q_out_10_1",
+    "q_out_10_2",
+    "q_out_10_3",
+    "q_out_10_4",
+    "q_out_10_5",
+    "q_out_10_6",
+    "q_out_10_7",
+    "q_out_10_8",
+    "q_out_10_9",
+    "q_out_10_10",
+    "q_out_10_11",
+    "q_out_10_12",
+    "q_out_10_13",
+    "q_out_10_14",
+    "q_out_10_15",
+    "q_out_10_16",
+    "q_out_10_17",
+    "q_out_10_18",
+    "q_out_10_19",
+    "q_out_10_20",
+    "q_out_10_21",
+    "q_out_10_22",
+    "q_out_10_23",
+    "q_out_10_24",
+    "q_out_10_25",
+    "q_out_10_26",
+    "q_out_10_27",
+    "q_out_10_28",
+    "q_out_10_29",
+    "q_out_10_30",
+    "q_out_10_31",
+    "q_out_10_32",
+    "q_out_10_33",
+    "q_out_10_34",
+    "q_out_10_35",
+    "q_out_10_36",
+    "q_out_10_37",
+    "q_out_10_38",
+    "q_out_10_39",
+    "q_out_10_40",
+    "q_out_10_41",
+    "q_out_10_42",
+    "q_out_10_43",
+    "q_out_10_44",
+    "q_out_10_45",
+    "q_out_10_46",
+    "q_out_10_47",
+    "q_out_10_48",
+    "q_out_10_49",
+    "q_out_10_50",
+    "q_out_10_51",
+    "q_out_10_52",
+    "q_out_10_53",
+    "q_out_10_54",
+    "q_out_10_55",
+    "q_out_11_1",
+    "q_out_11_2",
+    "q_out_11_3",
+    "q_out_11_4",
+    "q_out_11_5",
+    "q_out_11_6",
+    "q_out_11_7",
+    "q_out_11_8",
+    "q_out_11_9",
+    "q_out_11_10",
+    "q_out_11_11",
+    "q_out_11_12",
+    "q_out_11_13",
+    "q_out_11_14",
+    "q_out_11_15",
+    "q_out_11_16",
+    "q_out_11_17",
+    "q_out_11_18",
+    "q_out_11_19",
+    "q_out_11_20",
+    "q_out_11_21",
+    "q_out_11_22",
+    "q_out_11_23",
+    "q_out_11_24",
+    "q_out_11_25",
+    "q_out_11_26",
+    "q_out_11_27",
+    "q_out_11_28",
+    "q_out_11_29",
+    "q_out_11_30",
+    "q_out_11_31",
+    "q_out_11_32",
+    "q_out_11_33",
+    "q_out_11_34",
+    "q_out_11_35",
+    "q_out_11_36",
+    "q_out_11_37",
+    "q_out_11_38",
+    "q_out_11_39",
+    "q_out_11_40",
+    "q_out_11_41",
+    "q_out_11_42",
+    "q_out_11_43",
+    "q_out_11_44",
+    "q_out_11_45",
+    "q_out_11_46",
+    "q_out_11_47",
+    "q_out_11_48",
+    "q_out_11_49",
+    "q_out_11_50",
+    "q_out_11_51",
+    "q_out_11_52",
+    "q_out_11_53",
+    "q_out_11_54",
+    "q_out_11_55",
+    "q_out_11_56",
+    "q_out_11_57",
+    "q_out_11_58",
+    "q_out_11_59",
+    "q_out_11_60",
+    "q_out_11_61",
+    "q_out_11_62",
+    "q_out_11_63",
+    "q_out_11_64",
+    "q_out_11_65",
+    "q_out_11_66",
+    "q_out_11_67",
+    "q_out_11_68",
+    "q_out_11_69",
+    "q_out_11_70",
+    "q_out_11_71",
+    "q_out_11_72",
+    "q_out_11_73",
+    "q_out_11_74",
+    "q_out_11_75",
+    "q_out_11_76",
+    "q_out_11_77",
+    "q_out_11_78",
+    "q_out_11_79",
+    "q_out_11_80",
+    "q_out_11_81",
+    "q_out_11_82",
+    "q_out_11_83",
+    "q_out_11_84",
+    "q_out_11_85",
+    "q_out_11_86",
+    "q_out_11_87",
+    "q_out_11_88",
+    "q_out_11_89",
+    "q_out_12_1",
+    "q_out_12_2",
+    "q_out_12_3",
+    "q_out_12_4",
+    "q_out_12_5",
+    "q_out_12_6",
+    "q_out_12_7",
+    "q_out_12_8",
+    "q_out_12_9",
+    "q_out_12_10",
+    "q_out_12_11",
+    "q_out_12_12",
+    "q_out_12_13",
+    "q_out_12_14",
+    "q_out_12_15",
+    "q_out_12_16",
+    "q_out_12_17",
+    "q_out_12_18",
+    "q_out_12_19",
+    "q_out_12_20",
+    "q_out_12_21",
+    "q_out_12_22",
+    "q_out_12_23",
+    "q_out_12_24",
+    "q_out_12_25",
+    "q_out_12_26",
+    "q_out_12_27",
+    "q_out_12_28",
+    "q_out_12_29",
+    "q_out_12_30",
+    "q_out_12_31",
+    "q_out_12_32",
+    "q_out_12_33",
+    "q_out_12_34",
+    "q_out_12_35",
+    "q_out_12_36",
+    "q_out_12_37",
+    "q_out_12_38",
+    "q_out_12_39",
+    "q_out_12_40",
+    "q_out_12_41",
+    "q_out_12_42",
+    "q_out_12_43",
+    "q_out_12_44",
+    "q_out_12_45",
+    "q_out_12_46",
+    "q_out_12_47",
+    "q_out_12_48",
+    "q_out_12_49",
+    "q_out_12_50",
+    "q_out_12_51",
+    "q_out_12_52",
+    "q_out_12_53",
+    "q_out_12_54",
+    "q_out_12_55",
+    "q_out_12_56",
+    "q_out_12_57",
+    "q_out_12_58",
+    "q_out_12_59",
+    "q_out_12_60",
+    "q_out_12_61",
+    "q_out_12_62",
+    "q_out_12_63",
+    "q_out_12_64",
+    "q_out_12_65",
+    "q_out_12_66",
+    "q_out_12_67",
+    "q_out_12_68",
+    "q_out_12_69",
+    "q_out_12_70",
+    "q_out_12_71",
+    "q_out_12_72",
+    "q_out_12_73",
+    "q_out_12_74",
+    "q_out_12_75",
+    "q_out_12_76",
+    "q_out_12_77",
+    "q_out_12_78",
+    "q_out_12_79",
+    "q_out_12_80",
+    "q_out_12_81",
+    "q_out_12_82",
+    "q_out_12_83",
+    "q_out_12_84",
+    "q_out_12_85",
+    "q_out_12_86",
+    "q_out_12_87",
+    "q_out_12_88",
+    "q_out_12_89",
+    "q_out_12_90",
+    "q_out_12_91",
+    "q_out_12_92",
+    "q_out_12_93",
+    "q_out_12_94",
+    "q_out_12_95",
+    "q_out_12_96",
+    "q_out_12_97",
+    "q_out_12_98",
+    "q_out_12_99",
+    "q_out_12_100",
+    "q_out_12_101",
+    "q_out_12_102",
+    "q_out_12_103",
+    "q_out_12_104",
+    "q_out_12_105",
+    "q_out_12_106",
+    "q_out_12_107",
+    "q_out_12_108",
+    "q_out_12_109",
+    "q_out_12_110",
+    "q_out_12_111",
+    "q_out_12_112",
+    "q_out_12_113",
+    "q_out_12_114",
+    "q_out_12_115",
+    "q_out_12_116",
+    "q_out_12_117",
+    "q_out_12_118",
+    "q_out_12_119",
+    "q_out_12_120",
+    "q_out_12_121",
+    "q_out_12_122",
+    "q_out_12_123",
+    "q_out_12_124",
+    "q_out_12_125",
+    "q_out_12_126",
+    "q_out_12_127",
+    "q_out_12_128",
+    "q_out_12_129",
+    "q_out_12_130",
+    "q_out_12_131",
+    "q_out_12_132",
+    "q_out_12_133",
+    "q_out_12_134",
+    "q_out_12_135",
+    "q_out_12_136",
+    "q_out_12_137",
+    "q_out_12_138",
+    "q_out_12_139",
+    "q_out_12_140",
+    "q_out_12_141",
+    "q_out_12_142",
+    "q_out_12_143",
+    "q_out_12_144"
+  ],
+  "input_alphabet": [
+    "1"
+  ],
+  "tape_alphabet": [
+    "1",
+    "0",
+    "X",
+    "B"
+  ],
+  "initial_state": "q0",
+  "accept_states": [
+    "q_aceptar"
+  ],
+  "blank_symbol": "B",
+  "transitions": [
+    {
+      "current_state": "q0",
+      "read_symbol": "B",
+      "next_state": "q_aceptar",
+      "write_symbol": "B",
+      "move": "N"
+    },
+    {
+      "current_state": "q0",
+      "read_symbol": "1",
+      "next_state": "q1",
+      "write_symbol": "B",
+      "move": "R"
+    },
+    {
+      "current_state": "q1",
+      "read_symbol": "1",
+      "next_state": "q2",
+      "write_symbol": "B",
+      "move": "R"
+    },
+    {
+      "current_state": "q2",
+      "read_symbol": "1",
+      "next_state": "q3",
+      "write_symbol": "B",
+      "move": "R"
+    },
+    {
+      "current_state": "q3",
+      "read_symbol": "1",
+      "next_state": "q4",
+      "write_symbol": "B",
+      "move": "R"
+    },
+    {
+      "current_state": "q4",
+      "read_symbol": "1",
+      "next_state": "q5",
+      "write_symbol": "B",
+      "move": "R"
+    },
+    {
+      "current_state": "q5",
+      "read_symbol": "1",
+      "next_state": "q6",
+      "write_symbol": "B",
+      "move": "R"
+    },
+    {
+      "current_state": "q6",
+      "read_symbol": "1",
+      "next_state": "q7",
+      "write_symbol": "B",
+      "move": "R"
+    },
+    {
+      "current_state": "q7",
+      "read_symbol": "1",
+      "next_state": "q8",
+      "write_symbol": "B",
+      "move": "R"
+    },
+    {
+      "current_state": "q8",
+      "read_symbol": "1",
+      "next_state": "q9",
+      "write_symbol": "B",
+      "move": "R"
+    },
+    {
+      "current_state": "q9",
+      "read_symbol": "1",
+      "next_state": "q10",
+      "write_symbol": "B",
+      "move": "R"
+    },
+    {
+      "current_state": "q10",
+      "read_symbol": "1",
+      "next_state": "q11",
+      "write_symbol": "B",
+      "move": "R"
+    },
+    {
+      "current_state": "q11",
+      "read_symbol": "1",
+      "next_state": "q12",
+      "write_symbol": "B",
+      "move": "R"
+    },
+    {
+      "current_state": "q12",
+      "read_symbol": "1",
+      "next_state": "q_overflow",
+      "write_symbol": "B",
+      "move": "R"
+    },
+    {
+      "current_state": "q1",
+      "read_symbol": "B",
+      "next_state": "q_aceptar",
+      "write_symbol": "1",
+      "move": "N"
+    },
+    {
+      "current_state": "q2",
+      "read_symbol": "B",
+      "next_state": "q_aceptar",
+      "write_symbol": "1",
+      "move": "N"
+    },
+    {
+      "current_state": "q3",
+      "read_symbol": "B",
+      "next_state": "q_out_3_1",
+      "write_symbol": "B",
+      "move": "N"
+    },
+    {
+      "current_state": "q4",
+      "read_symbol": "B",
+      "next_state": "q_out_4_1",
+      "write_symbol": "B",
+      "move": "N"
+    },
+    {
+      "current_state": "q5",
+      "read_symbol": "B",
+      "next_state": "q_out_5_1",
+      "write_symbol": "B",
+      "move": "N"
+    },
+    {
+      "current_state": "q6",
+      "read_symbol": "B",
+      "next_state": "q_out_6_1",
+      "write_symbol": "B",
+      "move": "N"
+    },
+    {
+      "current_state": "q7",
+      "read_symbol": "B",
+      "next_state": "q_out_7_1",
+      "write_symbol": "B",
+      "move": "N"
+    },
+    {
+      "current_state": "q8",
+      "read_symbol": "B",
+      "next_state": "q_out_8_1",
+      "write_symbol": "B",
+      "move": "N"
+    },
+    {
+      "current_state": "q9",
+      "read_symbol": "B",
+      "next_state": "q_out_9_1",
+      "write_symbol": "B",
+      "move": "N"
+    },
+    {
+      "current_state": "q10",
+      "read_symbol": "B",
+      "next_state": "q_out_10_1",
+      "write_symbol": "B",
+      "move": "N"
+    },
+    {
+      "current_state": "q11",
+      "read_symbol": "B",
+      "next_state": "q_out_11_1",
+      "write_symbol": "B",
+      "move": "N"
+    },
+    {
+      "current_state": "q12",
+      "read_symbol": "B",
+      "next_state": "q_out_12_1",
+      "write_symbol": "B",
+      "move": "N"
+    },
+    {
+      "current_state": "q_out_3_1",
+      "read_symbol": "B",
+      "next_state": "q_out_3_2",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_3_2",
+      "read_symbol": "B",
+      "next_state": "q_aceptar",
+      "write_symbol": "1",
+      "move": "N"
+    },
+    {
+      "current_state": "q_out_4_1",
+      "read_symbol": "B",
+      "next_state": "q_out_4_2",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_4_2",
+      "read_symbol": "B",
+      "next_state": "q_out_4_3",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_4_3",
+      "read_symbol": "B",
+      "next_state": "q_aceptar",
+      "write_symbol": "1",
+      "move": "N"
+    },
+    {
+      "current_state": "q_out_5_1",
+      "read_symbol": "B",
+      "next_state": "q_out_5_2",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_5_2",
+      "read_symbol": "B",
+      "next_state": "q_out_5_3",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_5_3",
+      "read_symbol": "B",
+      "next_state": "q_out_5_4",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_5_4",
+      "read_symbol": "B",
+      "next_state": "q_out_5_5",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_5_5",
+      "read_symbol": "B",
+      "next_state": "q_aceptar",
+      "write_symbol": "1",
+      "move": "N"
+    },
+    {
+      "current_state": "q_out_6_1",
+      "read_symbol": "B",
+      "next_state": "q_out_6_2",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_6_2",
+      "read_symbol": "B",
+      "next_state": "q_out_6_3",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_6_3",
+      "read_symbol": "B",
+      "next_state": "q_out_6_4",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_6_4",
+      "read_symbol": "B",
+      "next_state": "q_out_6_5",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_6_5",
+      "read_symbol": "B",
+      "next_state": "q_out_6_6",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_6_6",
+      "read_symbol": "B",
+      "next_state": "q_out_6_7",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_6_7",
+      "read_symbol": "B",
+      "next_state": "q_out_6_8",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_6_8",
+      "read_symbol": "B",
+      "next_state": "q_aceptar",
+      "write_symbol": "1",
+      "move": "N"
+    },
+    {
+      "current_state": "q_out_7_1",
+      "read_symbol": "B",
+      "next_state": "q_out_7_2",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_7_2",
+      "read_symbol": "B",
+      "next_state": "q_out_7_3",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_7_3",
+      "read_symbol": "B",
+      "next_state": "q_out_7_4",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_7_4",
+      "read_symbol": "B",
+      "next_state": "q_out_7_5",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_7_5",
+      "read_symbol": "B",
+      "next_state": "q_out_7_6",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_7_6",
+      "read_symbol": "B",
+      "next_state": "q_out_7_7",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_7_7",
+      "read_symbol": "B",
+      "next_state": "q_out_7_8",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_7_8",
+      "read_symbol": "B",
+      "next_state": "q_out_7_9",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_7_9",
+      "read_symbol": "B",
+      "next_state": "q_out_7_10",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_7_10",
+      "read_symbol": "B",
+      "next_state": "q_out_7_11",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_7_11",
+      "read_symbol": "B",
+      "next_state": "q_out_7_12",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_7_12",
+      "read_symbol": "B",
+      "next_state": "q_out_7_13",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_7_13",
+      "read_symbol": "B",
+      "next_state": "q_aceptar",
+      "write_symbol": "1",
+      "move": "N"
+    },
+    {
+      "current_state": "q_out_8_1",
+      "read_symbol": "B",
+      "next_state": "q_out_8_2",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_8_2",
+      "read_symbol": "B",
+      "next_state": "q_out_8_3",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_8_3",
+      "read_symbol": "B",
+      "next_state": "q_out_8_4",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_8_4",
+      "read_symbol": "B",
+      "next_state": "q_out_8_5",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_8_5",
+      "read_symbol": "B",
+      "next_state": "q_out_8_6",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_8_6",
+      "read_symbol": "B",
+      "next_state": "q_out_8_7",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_8_7",
+      "read_symbol": "B",
+      "next_state": "q_out_8_8",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_8_8",
+      "read_symbol": "B",
+      "next_state": "q_out_8_9",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_8_9",
+      "read_symbol": "B",
+      "next_state": "q_out_8_10",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_8_10",
+      "read_symbol": "B",
+      "next_state": "q_out_8_11",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_8_11",
+      "read_symbol": "B",
+      "next_state": "q_out_8_12",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_8_12",
+      "read_symbol": "B",
+      "next_state": "q_out_8_13",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_8_13",
+      "read_symbol": "B",
+      "next_state": "q_out_8_14",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_8_14",
+      "read_symbol": "B",
+      "next_state": "q_out_8_15",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_8_15",
+      "read_symbol": "B",
+      "next_state": "q_out_8_16",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_8_16",
+      "read_symbol": "B",
+      "next_state": "q_out_8_17",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_8_17",
+      "read_symbol": "B",
+      "next_state": "q_out_8_18",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_8_18",
+      "read_symbol": "B",
+      "next_state": "q_out_8_19",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_8_19",
+      "read_symbol": "B",
+      "next_state": "q_out_8_20",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_8_20",
+      "read_symbol": "B",
+      "next_state": "q_out_8_21",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_8_21",
+      "read_symbol": "B",
+      "next_state": "q_aceptar",
+      "write_symbol": "1",
+      "move": "N"
+    },
+    {
+      "current_state": "q_out_9_1",
+      "read_symbol": "B",
+      "next_state": "q_out_9_2",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_9_2",
+      "read_symbol": "B",
+      "next_state": "q_out_9_3",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_9_3",
+      "read_symbol": "B",
+      "next_state": "q_out_9_4",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_9_4",
+      "read_symbol": "B",
+      "next_state": "q_out_9_5",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_9_5",
+      "read_symbol": "B",
+      "next_state": "q_out_9_6",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_9_6",
+      "read_symbol": "B",
+      "next_state": "q_out_9_7",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_9_7",
+      "read_symbol": "B",
+      "next_state": "q_out_9_8",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_9_8",
+      "read_symbol": "B",
+      "next_state": "q_out_9_9",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_9_9",
+      "read_symbol": "B",
+      "next_state": "q_out_9_10",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_9_10",
+      "read_symbol": "B",
+      "next_state": "q_out_9_11",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_9_11",
+      "read_symbol": "B",
+      "next_state": "q_out_9_12",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_9_12",
+      "read_symbol": "B",
+      "next_state": "q_out_9_13",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_9_13",
+      "read_symbol": "B",
+      "next_state": "q_out_9_14",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_9_14",
+      "read_symbol": "B",
+      "next_state": "q_out_9_15",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_9_15",
+      "read_symbol": "B",
+      "next_state": "q_out_9_16",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_9_16",
+      "read_symbol": "B",
+      "next_state": "q_out_9_17",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_9_17",
+      "read_symbol": "B",
+      "next_state": "q_out_9_18",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_9_18",
+      "read_symbol": "B",
+      "next_state": "q_out_9_19",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_9_19",
+      "read_symbol": "B",
+      "next_state": "q_out_9_20",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_9_20",
+      "read_symbol": "B",
+      "next_state": "q_out_9_21",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_9_21",
+      "read_symbol": "B",
+      "next_state": "q_out_9_22",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_9_22",
+      "read_symbol": "B",
+      "next_state": "q_out_9_23",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_9_23",
+      "read_symbol": "B",
+      "next_state": "q_out_9_24",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_9_24",
+      "read_symbol": "B",
+      "next_state": "q_out_9_25",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_9_25",
+      "read_symbol": "B",
+      "next_state": "q_out_9_26",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_9_26",
+      "read_symbol": "B",
+      "next_state": "q_out_9_27",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_9_27",
+      "read_symbol": "B",
+      "next_state": "q_out_9_28",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_9_28",
+      "read_symbol": "B",
+      "next_state": "q_out_9_29",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_9_29",
+      "read_symbol": "B",
+      "next_state": "q_out_9_30",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_9_30",
+      "read_symbol": "B",
+      "next_state": "q_out_9_31",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_9_31",
+      "read_symbol": "B",
+      "next_state": "q_out_9_32",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_9_32",
+      "read_symbol": "B",
+      "next_state": "q_out_9_33",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_9_33",
+      "read_symbol": "B",
+      "next_state": "q_out_9_34",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_9_34",
+      "read_symbol": "B",
+      "next_state": "q_aceptar",
+      "write_symbol": "1",
+      "move": "N"
+    },
+    {
+      "current_state": "q_out_10_1",
+      "read_symbol": "B",
+      "next_state": "q_out_10_2",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_2",
+      "read_symbol": "B",
+      "next_state": "q_out_10_3",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_3",
+      "read_symbol": "B",
+      "next_state": "q_out_10_4",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_4",
+      "read_symbol": "B",
+      "next_state": "q_out_10_5",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_5",
+      "read_symbol": "B",
+      "next_state": "q_out_10_6",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_6",
+      "read_symbol": "B",
+      "next_state": "q_out_10_7",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_7",
+      "read_symbol": "B",
+      "next_state": "q_out_10_8",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_8",
+      "read_symbol": "B",
+      "next_state": "q_out_10_9",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_9",
+      "read_symbol": "B",
+      "next_state": "q_out_10_10",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_10",
+      "read_symbol": "B",
+      "next_state": "q_out_10_11",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_11",
+      "read_symbol": "B",
+      "next_state": "q_out_10_12",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_12",
+      "read_symbol": "B",
+      "next_state": "q_out_10_13",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_13",
+      "read_symbol": "B",
+      "next_state": "q_out_10_14",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_14",
+      "read_symbol": "B",
+      "next_state": "q_out_10_15",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_15",
+      "read_symbol": "B",
+      "next_state": "q_out_10_16",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_16",
+      "read_symbol": "B",
+      "next_state": "q_out_10_17",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_17",
+      "read_symbol": "B",
+      "next_state": "q_out_10_18",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_18",
+      "read_symbol": "B",
+      "next_state": "q_out_10_19",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_19",
+      "read_symbol": "B",
+      "next_state": "q_out_10_20",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_20",
+      "read_symbol": "B",
+      "next_state": "q_out_10_21",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_21",
+      "read_symbol": "B",
+      "next_state": "q_out_10_22",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_22",
+      "read_symbol": "B",
+      "next_state": "q_out_10_23",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_23",
+      "read_symbol": "B",
+      "next_state": "q_out_10_24",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_24",
+      "read_symbol": "B",
+      "next_state": "q_out_10_25",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_25",
+      "read_symbol": "B",
+      "next_state": "q_out_10_26",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_26",
+      "read_symbol": "B",
+      "next_state": "q_out_10_27",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_27",
+      "read_symbol": "B",
+      "next_state": "q_out_10_28",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_28",
+      "read_symbol": "B",
+      "next_state": "q_out_10_29",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_29",
+      "read_symbol": "B",
+      "next_state": "q_out_10_30",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_30",
+      "read_symbol": "B",
+      "next_state": "q_out_10_31",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_31",
+      "read_symbol": "B",
+      "next_state": "q_out_10_32",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_32",
+      "read_symbol": "B",
+      "next_state": "q_out_10_33",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_33",
+      "read_symbol": "B",
+      "next_state": "q_out_10_34",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_34",
+      "read_symbol": "B",
+      "next_state": "q_out_10_35",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_35",
+      "read_symbol": "B",
+      "next_state": "q_out_10_36",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_36",
+      "read_symbol": "B",
+      "next_state": "q_out_10_37",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_37",
+      "read_symbol": "B",
+      "next_state": "q_out_10_38",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_38",
+      "read_symbol": "B",
+      "next_state": "q_out_10_39",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_39",
+      "read_symbol": "B",
+      "next_state": "q_out_10_40",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_40",
+      "read_symbol": "B",
+      "next_state": "q_out_10_41",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_41",
+      "read_symbol": "B",
+      "next_state": "q_out_10_42",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_42",
+      "read_symbol": "B",
+      "next_state": "q_out_10_43",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_43",
+      "read_symbol": "B",
+      "next_state": "q_out_10_44",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_44",
+      "read_symbol": "B",
+      "next_state": "q_out_10_45",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_45",
+      "read_symbol": "B",
+      "next_state": "q_out_10_46",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_46",
+      "read_symbol": "B",
+      "next_state": "q_out_10_47",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_47",
+      "read_symbol": "B",
+      "next_state": "q_out_10_48",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_48",
+      "read_symbol": "B",
+      "next_state": "q_out_10_49",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_49",
+      "read_symbol": "B",
+      "next_state": "q_out_10_50",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_50",
+      "read_symbol": "B",
+      "next_state": "q_out_10_51",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_51",
+      "read_symbol": "B",
+      "next_state": "q_out_10_52",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_52",
+      "read_symbol": "B",
+      "next_state": "q_out_10_53",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_53",
+      "read_symbol": "B",
+      "next_state": "q_out_10_54",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_54",
+      "read_symbol": "B",
+      "next_state": "q_out_10_55",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_10_55",
+      "read_symbol": "B",
+      "next_state": "q_aceptar",
+      "write_symbol": "1",
+      "move": "N"
+    },
+    {
+      "current_state": "q_out_11_1",
+      "read_symbol": "B",
+      "next_state": "q_out_11_2",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_2",
+      "read_symbol": "B",
+      "next_state": "q_out_11_3",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_3",
+      "read_symbol": "B",
+      "next_state": "q_out_11_4",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_4",
+      "read_symbol": "B",
+      "next_state": "q_out_11_5",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_5",
+      "read_symbol": "B",
+      "next_state": "q_out_11_6",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_6",
+      "read_symbol": "B",
+      "next_state": "q_out_11_7",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_7",
+      "read_symbol": "B",
+      "next_state": "q_out_11_8",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_8",
+      "read_symbol": "B",
+      "next_state": "q_out_11_9",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_9",
+      "read_symbol": "B",
+      "next_state": "q_out_11_10",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_10",
+      "read_symbol": "B",
+      "next_state": "q_out_11_11",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_11",
+      "read_symbol": "B",
+      "next_state": "q_out_11_12",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_12",
+      "read_symbol": "B",
+      "next_state": "q_out_11_13",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_13",
+      "read_symbol": "B",
+      "next_state": "q_out_11_14",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_14",
+      "read_symbol": "B",
+      "next_state": "q_out_11_15",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_15",
+      "read_symbol": "B",
+      "next_state": "q_out_11_16",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_16",
+      "read_symbol": "B",
+      "next_state": "q_out_11_17",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_17",
+      "read_symbol": "B",
+      "next_state": "q_out_11_18",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_18",
+      "read_symbol": "B",
+      "next_state": "q_out_11_19",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_19",
+      "read_symbol": "B",
+      "next_state": "q_out_11_20",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_20",
+      "read_symbol": "B",
+      "next_state": "q_out_11_21",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_21",
+      "read_symbol": "B",
+      "next_state": "q_out_11_22",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_22",
+      "read_symbol": "B",
+      "next_state": "q_out_11_23",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_23",
+      "read_symbol": "B",
+      "next_state": "q_out_11_24",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_24",
+      "read_symbol": "B",
+      "next_state": "q_out_11_25",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_25",
+      "read_symbol": "B",
+      "next_state": "q_out_11_26",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_26",
+      "read_symbol": "B",
+      "next_state": "q_out_11_27",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_27",
+      "read_symbol": "B",
+      "next_state": "q_out_11_28",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_28",
+      "read_symbol": "B",
+      "next_state": "q_out_11_29",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_29",
+      "read_symbol": "B",
+      "next_state": "q_out_11_30",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_30",
+      "read_symbol": "B",
+      "next_state": "q_out_11_31",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_31",
+      "read_symbol": "B",
+      "next_state": "q_out_11_32",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_32",
+      "read_symbol": "B",
+      "next_state": "q_out_11_33",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_33",
+      "read_symbol": "B",
+      "next_state": "q_out_11_34",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_34",
+      "read_symbol": "B",
+      "next_state": "q_out_11_35",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_35",
+      "read_symbol": "B",
+      "next_state": "q_out_11_36",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_36",
+      "read_symbol": "B",
+      "next_state": "q_out_11_37",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_37",
+      "read_symbol": "B",
+      "next_state": "q_out_11_38",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_38",
+      "read_symbol": "B",
+      "next_state": "q_out_11_39",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_39",
+      "read_symbol": "B",
+      "next_state": "q_out_11_40",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_40",
+      "read_symbol": "B",
+      "next_state": "q_out_11_41",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_41",
+      "read_symbol": "B",
+      "next_state": "q_out_11_42",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_42",
+      "read_symbol": "B",
+      "next_state": "q_out_11_43",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_43",
+      "read_symbol": "B",
+      "next_state": "q_out_11_44",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_44",
+      "read_symbol": "B",
+      "next_state": "q_out_11_45",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_45",
+      "read_symbol": "B",
+      "next_state": "q_out_11_46",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_46",
+      "read_symbol": "B",
+      "next_state": "q_out_11_47",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_47",
+      "read_symbol": "B",
+      "next_state": "q_out_11_48",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_48",
+      "read_symbol": "B",
+      "next_state": "q_out_11_49",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_49",
+      "read_symbol": "B",
+      "next_state": "q_out_11_50",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_50",
+      "read_symbol": "B",
+      "next_state": "q_out_11_51",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_51",
+      "read_symbol": "B",
+      "next_state": "q_out_11_52",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_52",
+      "read_symbol": "B",
+      "next_state": "q_out_11_53",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_53",
+      "read_symbol": "B",
+      "next_state": "q_out_11_54",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_54",
+      "read_symbol": "B",
+      "next_state": "q_out_11_55",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_55",
+      "read_symbol": "B",
+      "next_state": "q_out_11_56",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_56",
+      "read_symbol": "B",
+      "next_state": "q_out_11_57",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_57",
+      "read_symbol": "B",
+      "next_state": "q_out_11_58",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_58",
+      "read_symbol": "B",
+      "next_state": "q_out_11_59",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_59",
+      "read_symbol": "B",
+      "next_state": "q_out_11_60",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_60",
+      "read_symbol": "B",
+      "next_state": "q_out_11_61",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_61",
+      "read_symbol": "B",
+      "next_state": "q_out_11_62",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_62",
+      "read_symbol": "B",
+      "next_state": "q_out_11_63",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_63",
+      "read_symbol": "B",
+      "next_state": "q_out_11_64",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_64",
+      "read_symbol": "B",
+      "next_state": "q_out_11_65",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_65",
+      "read_symbol": "B",
+      "next_state": "q_out_11_66",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_66",
+      "read_symbol": "B",
+      "next_state": "q_out_11_67",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_67",
+      "read_symbol": "B",
+      "next_state": "q_out_11_68",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_68",
+      "read_symbol": "B",
+      "next_state": "q_out_11_69",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_69",
+      "read_symbol": "B",
+      "next_state": "q_out_11_70",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_70",
+      "read_symbol": "B",
+      "next_state": "q_out_11_71",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_71",
+      "read_symbol": "B",
+      "next_state": "q_out_11_72",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_72",
+      "read_symbol": "B",
+      "next_state": "q_out_11_73",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_73",
+      "read_symbol": "B",
+      "next_state": "q_out_11_74",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_74",
+      "read_symbol": "B",
+      "next_state": "q_out_11_75",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_75",
+      "read_symbol": "B",
+      "next_state": "q_out_11_76",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_76",
+      "read_symbol": "B",
+      "next_state": "q_out_11_77",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_77",
+      "read_symbol": "B",
+      "next_state": "q_out_11_78",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_78",
+      "read_symbol": "B",
+      "next_state": "q_out_11_79",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_79",
+      "read_symbol": "B",
+      "next_state": "q_out_11_80",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_80",
+      "read_symbol": "B",
+      "next_state": "q_out_11_81",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_81",
+      "read_symbol": "B",
+      "next_state": "q_out_11_82",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_82",
+      "read_symbol": "B",
+      "next_state": "q_out_11_83",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_83",
+      "read_symbol": "B",
+      "next_state": "q_out_11_84",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_84",
+      "read_symbol": "B",
+      "next_state": "q_out_11_85",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_85",
+      "read_symbol": "B",
+      "next_state": "q_out_11_86",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_86",
+      "read_symbol": "B",
+      "next_state": "q_out_11_87",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_87",
+      "read_symbol": "B",
+      "next_state": "q_out_11_88",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_88",
+      "read_symbol": "B",
+      "next_state": "q_out_11_89",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_11_89",
+      "read_symbol": "B",
+      "next_state": "q_aceptar",
+      "write_symbol": "1",
+      "move": "N"
+    },
+    {
+      "current_state": "q_out_12_1",
+      "read_symbol": "B",
+      "next_state": "q_out_12_2",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_2",
+      "read_symbol": "B",
+      "next_state": "q_out_12_3",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_3",
+      "read_symbol": "B",
+      "next_state": "q_out_12_4",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_4",
+      "read_symbol": "B",
+      "next_state": "q_out_12_5",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_5",
+      "read_symbol": "B",
+      "next_state": "q_out_12_6",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_6",
+      "read_symbol": "B",
+      "next_state": "q_out_12_7",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_7",
+      "read_symbol": "B",
+      "next_state": "q_out_12_8",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_8",
+      "read_symbol": "B",
+      "next_state": "q_out_12_9",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_9",
+      "read_symbol": "B",
+      "next_state": "q_out_12_10",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_10",
+      "read_symbol": "B",
+      "next_state": "q_out_12_11",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_11",
+      "read_symbol": "B",
+      "next_state": "q_out_12_12",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_12",
+      "read_symbol": "B",
+      "next_state": "q_out_12_13",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_13",
+      "read_symbol": "B",
+      "next_state": "q_out_12_14",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_14",
+      "read_symbol": "B",
+      "next_state": "q_out_12_15",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_15",
+      "read_symbol": "B",
+      "next_state": "q_out_12_16",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_16",
+      "read_symbol": "B",
+      "next_state": "q_out_12_17",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_17",
+      "read_symbol": "B",
+      "next_state": "q_out_12_18",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_18",
+      "read_symbol": "B",
+      "next_state": "q_out_12_19",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_19",
+      "read_symbol": "B",
+      "next_state": "q_out_12_20",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_20",
+      "read_symbol": "B",
+      "next_state": "q_out_12_21",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_21",
+      "read_symbol": "B",
+      "next_state": "q_out_12_22",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_22",
+      "read_symbol": "B",
+      "next_state": "q_out_12_23",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_23",
+      "read_symbol": "B",
+      "next_state": "q_out_12_24",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_24",
+      "read_symbol": "B",
+      "next_state": "q_out_12_25",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_25",
+      "read_symbol": "B",
+      "next_state": "q_out_12_26",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_26",
+      "read_symbol": "B",
+      "next_state": "q_out_12_27",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_27",
+      "read_symbol": "B",
+      "next_state": "q_out_12_28",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_28",
+      "read_symbol": "B",
+      "next_state": "q_out_12_29",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_29",
+      "read_symbol": "B",
+      "next_state": "q_out_12_30",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_30",
+      "read_symbol": "B",
+      "next_state": "q_out_12_31",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_31",
+      "read_symbol": "B",
+      "next_state": "q_out_12_32",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_32",
+      "read_symbol": "B",
+      "next_state": "q_out_12_33",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_33",
+      "read_symbol": "B",
+      "next_state": "q_out_12_34",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_34",
+      "read_symbol": "B",
+      "next_state": "q_out_12_35",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_35",
+      "read_symbol": "B",
+      "next_state": "q_out_12_36",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_36",
+      "read_symbol": "B",
+      "next_state": "q_out_12_37",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_37",
+      "read_symbol": "B",
+      "next_state": "q_out_12_38",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_38",
+      "read_symbol": "B",
+      "next_state": "q_out_12_39",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_39",
+      "read_symbol": "B",
+      "next_state": "q_out_12_40",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_40",
+      "read_symbol": "B",
+      "next_state": "q_out_12_41",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_41",
+      "read_symbol": "B",
+      "next_state": "q_out_12_42",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_42",
+      "read_symbol": "B",
+      "next_state": "q_out_12_43",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_43",
+      "read_symbol": "B",
+      "next_state": "q_out_12_44",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_44",
+      "read_symbol": "B",
+      "next_state": "q_out_12_45",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_45",
+      "read_symbol": "B",
+      "next_state": "q_out_12_46",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_46",
+      "read_symbol": "B",
+      "next_state": "q_out_12_47",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_47",
+      "read_symbol": "B",
+      "next_state": "q_out_12_48",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_48",
+      "read_symbol": "B",
+      "next_state": "q_out_12_49",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_49",
+      "read_symbol": "B",
+      "next_state": "q_out_12_50",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_50",
+      "read_symbol": "B",
+      "next_state": "q_out_12_51",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_51",
+      "read_symbol": "B",
+      "next_state": "q_out_12_52",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_52",
+      "read_symbol": "B",
+      "next_state": "q_out_12_53",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_53",
+      "read_symbol": "B",
+      "next_state": "q_out_12_54",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_54",
+      "read_symbol": "B",
+      "next_state": "q_out_12_55",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_55",
+      "read_symbol": "B",
+      "next_state": "q_out_12_56",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_56",
+      "read_symbol": "B",
+      "next_state": "q_out_12_57",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_57",
+      "read_symbol": "B",
+      "next_state": "q_out_12_58",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_58",
+      "read_symbol": "B",
+      "next_state": "q_out_12_59",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_59",
+      "read_symbol": "B",
+      "next_state": "q_out_12_60",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_60",
+      "read_symbol": "B",
+      "next_state": "q_out_12_61",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_61",
+      "read_symbol": "B",
+      "next_state": "q_out_12_62",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_62",
+      "read_symbol": "B",
+      "next_state": "q_out_12_63",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_63",
+      "read_symbol": "B",
+      "next_state": "q_out_12_64",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_64",
+      "read_symbol": "B",
+      "next_state": "q_out_12_65",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_65",
+      "read_symbol": "B",
+      "next_state": "q_out_12_66",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_66",
+      "read_symbol": "B",
+      "next_state": "q_out_12_67",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_67",
+      "read_symbol": "B",
+      "next_state": "q_out_12_68",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_68",
+      "read_symbol": "B",
+      "next_state": "q_out_12_69",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_69",
+      "read_symbol": "B",
+      "next_state": "q_out_12_70",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_70",
+      "read_symbol": "B",
+      "next_state": "q_out_12_71",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_71",
+      "read_symbol": "B",
+      "next_state": "q_out_12_72",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_72",
+      "read_symbol": "B",
+      "next_state": "q_out_12_73",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_73",
+      "read_symbol": "B",
+      "next_state": "q_out_12_74",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_74",
+      "read_symbol": "B",
+      "next_state": "q_out_12_75",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_75",
+      "read_symbol": "B",
+      "next_state": "q_out_12_76",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_76",
+      "read_symbol": "B",
+      "next_state": "q_out_12_77",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_77",
+      "read_symbol": "B",
+      "next_state": "q_out_12_78",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_78",
+      "read_symbol": "B",
+      "next_state": "q_out_12_79",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_79",
+      "read_symbol": "B",
+      "next_state": "q_out_12_80",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_80",
+      "read_symbol": "B",
+      "next_state": "q_out_12_81",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_81",
+      "read_symbol": "B",
+      "next_state": "q_out_12_82",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_82",
+      "read_symbol": "B",
+      "next_state": "q_out_12_83",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_83",
+      "read_symbol": "B",
+      "next_state": "q_out_12_84",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_84",
+      "read_symbol": "B",
+      "next_state": "q_out_12_85",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_85",
+      "read_symbol": "B",
+      "next_state": "q_out_12_86",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_86",
+      "read_symbol": "B",
+      "next_state": "q_out_12_87",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_87",
+      "read_symbol": "B",
+      "next_state": "q_out_12_88",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_88",
+      "read_symbol": "B",
+      "next_state": "q_out_12_89",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_89",
+      "read_symbol": "B",
+      "next_state": "q_out_12_90",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_90",
+      "read_symbol": "B",
+      "next_state": "q_out_12_91",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_91",
+      "read_symbol": "B",
+      "next_state": "q_out_12_92",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_92",
+      "read_symbol": "B",
+      "next_state": "q_out_12_93",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_93",
+      "read_symbol": "B",
+      "next_state": "q_out_12_94",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_94",
+      "read_symbol": "B",
+      "next_state": "q_out_12_95",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_95",
+      "read_symbol": "B",
+      "next_state": "q_out_12_96",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_96",
+      "read_symbol": "B",
+      "next_state": "q_out_12_97",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_97",
+      "read_symbol": "B",
+      "next_state": "q_out_12_98",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_98",
+      "read_symbol": "B",
+      "next_state": "q_out_12_99",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_99",
+      "read_symbol": "B",
+      "next_state": "q_out_12_100",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_100",
+      "read_symbol": "B",
+      "next_state": "q_out_12_101",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_101",
+      "read_symbol": "B",
+      "next_state": "q_out_12_102",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_102",
+      "read_symbol": "B",
+      "next_state": "q_out_12_103",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_103",
+      "read_symbol": "B",
+      "next_state": "q_out_12_104",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_104",
+      "read_symbol": "B",
+      "next_state": "q_out_12_105",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_105",
+      "read_symbol": "B",
+      "next_state": "q_out_12_106",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_106",
+      "read_symbol": "B",
+      "next_state": "q_out_12_107",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_107",
+      "read_symbol": "B",
+      "next_state": "q_out_12_108",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_108",
+      "read_symbol": "B",
+      "next_state": "q_out_12_109",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_109",
+      "read_symbol": "B",
+      "next_state": "q_out_12_110",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_110",
+      "read_symbol": "B",
+      "next_state": "q_out_12_111",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_111",
+      "read_symbol": "B",
+      "next_state": "q_out_12_112",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_112",
+      "read_symbol": "B",
+      "next_state": "q_out_12_113",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_113",
+      "read_symbol": "B",
+      "next_state": "q_out_12_114",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_114",
+      "read_symbol": "B",
+      "next_state": "q_out_12_115",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_115",
+      "read_symbol": "B",
+      "next_state": "q_out_12_116",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_116",
+      "read_symbol": "B",
+      "next_state": "q_out_12_117",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_117",
+      "read_symbol": "B",
+      "next_state": "q_out_12_118",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_118",
+      "read_symbol": "B",
+      "next_state": "q_out_12_119",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_119",
+      "read_symbol": "B",
+      "next_state": "q_out_12_120",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_120",
+      "read_symbol": "B",
+      "next_state": "q_out_12_121",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_121",
+      "read_symbol": "B",
+      "next_state": "q_out_12_122",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_122",
+      "read_symbol": "B",
+      "next_state": "q_out_12_123",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_123",
+      "read_symbol": "B",
+      "next_state": "q_out_12_124",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_124",
+      "read_symbol": "B",
+      "next_state": "q_out_12_125",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_125",
+      "read_symbol": "B",
+      "next_state": "q_out_12_126",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_126",
+      "read_symbol": "B",
+      "next_state": "q_out_12_127",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_127",
+      "read_symbol": "B",
+      "next_state": "q_out_12_128",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_128",
+      "read_symbol": "B",
+      "next_state": "q_out_12_129",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_129",
+      "read_symbol": "B",
+      "next_state": "q_out_12_130",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_130",
+      "read_symbol": "B",
+      "next_state": "q_out_12_131",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_131",
+      "read_symbol": "B",
+      "next_state": "q_out_12_132",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_132",
+      "read_symbol": "B",
+      "next_state": "q_out_12_133",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_133",
+      "read_symbol": "B",
+      "next_state": "q_out_12_134",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_134",
+      "read_symbol": "B",
+      "next_state": "q_out_12_135",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_135",
+      "read_symbol": "B",
+      "next_state": "q_out_12_136",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_136",
+      "read_symbol": "B",
+      "next_state": "q_out_12_137",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_137",
+      "read_symbol": "B",
+      "next_state": "q_out_12_138",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_138",
+      "read_symbol": "B",
+      "next_state": "q_out_12_139",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_139",
+      "read_symbol": "B",
+      "next_state": "q_out_12_140",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_140",
+      "read_symbol": "B",
+      "next_state": "q_out_12_141",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_141",
+      "read_symbol": "B",
+      "next_state": "q_out_12_142",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_142",
+      "read_symbol": "B",
+      "next_state": "q_out_12_143",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_143",
+      "read_symbol": "B",
+      "next_state": "q_out_12_144",
+      "write_symbol": "1",
+      "move": "R"
+    },
+    {
+      "current_state": "q_out_12_144",
+      "read_symbol": "B",
+      "next_state": "q_aceptar",
+      "write_symbol": "1",
+      "move": "N"
+    },
+    {
+      "current_state": "q_overflow",
+      "read_symbol": "1",
+      "next_state": "q_overflow",
+      "write_symbol": "B",
+      "move": "R"
+    },
+    {
+      "current_state": "q_overflow",
+      "read_symbol": "B",
+      "next_state": "q_aceptar",
+      "write_symbol": "X",
+      "move": "N"
+    }
+  ]
+}
