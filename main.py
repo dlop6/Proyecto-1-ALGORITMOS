@@ -206,11 +206,15 @@ def generarGraficoDispersion(rutaCsv: str, rutaPng: str) -> bool:
     fig, ax = plt.subplots(figsize=(8, 5))
     ax.scatter(ns, ts, color="#2563eb", zorder=5, label="Datos medidos")
     xf = np.linspace(0, max(ns), 200)
-    ax.plot(xf, a*xf**2 + b*xf + c, color="#dc2626", linewidth=1.5,
+    # Un polinomio de ajuste puede predecir valores negativos en tramos cortos;
+    # se recorta a 0 porque el tiempo físico no puede ser negativo.
+    yfit = np.maximum(a*xf**2 + b*xf + c, 0.0)
+    ax.plot(xf, yfit, color="#dc2626", linewidth=1.5,
             label=f"Regresion: {a:.2e}n^2 + {b:.2e}n + {c:.2e}")
     ax.set_xlabel("n (tamaño de entrada)")
     ax.set_ylabel("Tiempo promedio (s)")
     ax.set_title("Tiempo de ejecución vs tamaño de entrada")
+    ax.set_ylim(bottom=0.0)
     ax.legend(fontsize=9)
     ax.grid(True, alpha=0.3)
     fig.tight_layout()
