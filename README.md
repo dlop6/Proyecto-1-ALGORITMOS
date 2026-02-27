@@ -4,11 +4,11 @@ Simulador de Máquinas de Turing deterministas de una cinta, aplicado al cálcul
 
 ## Requisitos
 
-- Python
-- `matplotlib`
+- Python 3.8+
+- Dependencias: `matplotlib`, `numpy`, `python-docx`, `pytest`
 
 ```bash
-pip install matplotlib python-docx
+pip install -r requirements.txt
 ```
 
 ## Ejecución
